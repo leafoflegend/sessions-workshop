@@ -1,0 +1,45 @@
+{
+  "name": "sessions-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "npm run start:dev-server & npm run start:dev-client",
+    "start:dev-server": "./node_modules/.bin/nodemon -q --delay 1 -w src src/index.js",
+    "start:dev-client": "./node_modules/.bin/webpack client/index.js -o static/client.js -w --mode=\\\"development\\\" --module-bind js=babel-loader --devtool=source-map",
+    "create:database": "./createdb.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
+    "@babel/plugin-proposal-function-sent": "^7.5.0",
+    "@babel/plugin-proposal-json-strings": "^7.2.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-private-methods": "^7.6.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "nodemon": "^1.18.7",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

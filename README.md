@@ -1,6 +1,7 @@
 ## Sessions Workshop
+![Cookies](https://media1.giphy.com/media/BWoUbBTz1yuhW05Sgp/giphy.gif)
 
-#### Goal
+### Goal
 The goal of this workshop is to step into a small application, and implement cookie/session authentication. I have tried to remove everything that isn't directly related to sessions out of your hands. Webpack is setup. The front end is already making the request when you hit **Login**. Its even dumping the results of errors or successes onto the redux store! **Your goal is to focus solely on the following four tasks (with some optional stretches):** 
 
 1. The login form should only go to `/user` if a user submits a **username and password that exists on a user in the database.**
@@ -8,12 +9,12 @@ The goal of this workshop is to step into a small application, and implement coo
 3. The `/user` page **should not be accessible if the browser does not have a cookie of a logged in user. Further, the `/user` page should display information about the user - like how many times they've vistied the site.**
 4. The user should be able to logout from the `/user` page.
 
-#### Stretch Goals
+### Stretch Goals
 
 4. People should be able to **sign up on the front end.**
 5. If a user is already logged in when they visit the site, they should be immediately brought to the `/user` route.
 
-#### Advice
+### Advice
 
 **Files of interest:**
 1. `/src/db/models/User.js`
@@ -31,7 +32,7 @@ If for some reason you need to make additional `POST` calls to the server from t
 
 Its worth note that **I've already installed `express-session`, but have not used it at all... Its up to you if you want to use it, but I HIGHLY RECOMMEND IT.**
 
-#### Getting Started
+### Getting Started
 1. `npm i`
 2. `npm run create:database`
 - I made this as a helper, if it doesnt work, create a database however it is you do that with the name `sessions-workshop`.

@@ -8,8 +8,15 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
+  header: {
+    width: '100%',
+    textAlign: 'center',
+    color: 'gold',
+    paddingLeft: '1em',
+    paddingRight: '1em',
+  },
   formContainer: {
-    width: '400px',
+    minWidth: '400px',
     padding: '2em',
     display: 'flex',
     flexDirection: 'column',
@@ -28,7 +35,7 @@ const styles = {
     alignItems: 'flex-start',
     fontSize: '1em',
     textAlign: 'center',
-    margin: '1em',
+    padding: '1em',
   },
   input: {
     flexGrow: 1,

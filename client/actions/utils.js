@@ -19,7 +19,7 @@ const postFetch = (url, data) => {
       const firstStatusChar = status.toString()[0];
 
       if (firstStatusChar === '4' || firstStatusChar === '5') {
-        throw new Error(`${status}: ${JSON.stringify(response)}`);
+        throw new Error(`${status}: ${JSON.stringify(json)}`);
       }
 
       return {

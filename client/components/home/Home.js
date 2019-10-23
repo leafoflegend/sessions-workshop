@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { changeFormField, onLogin } from '../../actions/index.js';
 import styles from './styles.js';
@@ -32,6 +33,11 @@ class Home extends Component {
           onSubmit={e => e.preventDefault()}
           style={styles.formContainer}
         >
+          <h1
+            style={styles.header}
+          >
+            Login Form
+          </h1>
           <div
             style={styles.inputContainer}
           >
@@ -93,13 +99,13 @@ const mapStateToProps = ({ username, password, err }) => ({
   err: err || '',
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, { history }) => ({
   onUpdateField: ({ target: { value, name } }) => dispatch(
     changeFormField(name, value),
   ),
-  onLogin: () => dispatch(onLogin),
+  onLogin: () => dispatch(onLogin(history)),
 });
 
-const ConnectedHome = connect(mapStateToProps, mapDispatchToProps)(Home);
+const ConnectedHome = withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
 
 export default ConnectedHome;

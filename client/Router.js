@@ -11,6 +11,10 @@ class Router extends Component {
     return (
       <BrowserRouter>
         <Switch>
+          {/* TODO: This should lead to an authenticated page... */}
+          <Route path={"/user"} exact>
+            Hello There!
+          </Route>
           <Route>
             <Home />
           </Route>

@@ -1,0 +1,7 @@
+{
+  "events": {
+    "exit": "kill $(lsof -ti :3000)",
+    "crash": "kill $(lsof -ti :3000)",
+    "start": "kill $(lsof -ti :3000)"
+  }
+}

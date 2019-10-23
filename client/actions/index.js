@@ -20,7 +20,7 @@ const setLoginSuccess = user => ({
   user,
 });
 
-const onLogin = (dispatch, getState) => {
+const onLogin = (history) => (dispatch, getState) => {
   const { username, password } = getState();
 
   return postFetch('/api/login', {
@@ -28,12 +28,11 @@ const onLogin = (dispatch, getState) => {
     password,
   })
     .then(response => {
-      window.history.pushState({}, 'User', '/user');
-      console.log('Response: ', response);
+      history.push('/user');
       return dispatch(setLoginSuccess(response.data));
     })
     .catch(e => {
-      return dispatch(setLoginError(e));
+      return dispatch(setLoginError(e.message));
     })
 };
 

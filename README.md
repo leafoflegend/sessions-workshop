@@ -2,7 +2,9 @@
 ![Cookies](https://media1.giphy.com/media/BWoUbBTz1yuhW05Sgp/giphy.gif)
 
 ### Goal
-The goal of this workshop is to step into a small application, and implement cookie/session authentication. I have tried to remove everything that isn't directly related to sessions out of your hands. Webpack is setup. The front end is already making the request when you hit **Login**. Its even dumping the results of errors or successes onto the redux store! **Your goal is to focus solely on the following four tasks (with some optional stretches):** 
+The goal of this workshop is to step into a small application, and implement cookie/session authentication. I have tried to remove everything that isn't directly related to sessions out of your hands. Webpack is setup. The front end is already making the request when you hit **Login**. Its even dumping the results of errors or successes onto the redux store! **Your goal is to focus solely on the following four tasks (with some optional stretches):**
+
+A Home page component has already been built. You will need to build a second component for your authenticated page. Additionally, you will need to complete the seed file, User model, and any relevant API routes.
 
 1. The login form should only go to `/user` if a user submits a **username and password that exists on a user in the database.**
 2. You should build out the **seed side of `syncAndSeed` and the rest of the `User` model.**
@@ -17,10 +19,10 @@ The goal of this workshop is to step into a small application, and implement coo
 ### Advice
 
 **Files of interest:**
-1. `/src/db/models/User.js`
-2. `/src/db/index.js`
-3. `/src/client/Router.js`
-4. `/src/index.js`
+1. `/server/db/models/User.js`
+2. `/server/db/index.js`
+3. `/server/index.js`
+4. `/client/Router.js`
 
 **You really should not need to touch the other files. That doesn't mean you shouldn't read some of the ones that might help you better understand the flow. Put a `console.log` in the reducer if you want to look there, and you can add `logs` to the express routes if that helps you there.**
 
@@ -31,6 +33,8 @@ If for some reason you need to make additional `POST` calls to the server from t
 [You should absolutely take a look at Eric's videos if you feel lost on some of the core topics!](https://learn.fullstackacademy.com/workshop/5d8d5346387ac9000401ab2b/content/5d8d5354ea7ac60004199d8b/text)
 
 Its worth note that **I've already installed `express-session`, but have not used it at all... Its up to you if you want to use it, but I HIGHLY RECOMMEND IT.**
+
+**Thanks to some middleware in your server/index.js file, you can view each request that hits your server, using your terminal. This is helpful for debugging purposes.**
 
 ### Getting Started
 1. `npm i`

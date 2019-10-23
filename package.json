@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "npm run start:dev-server & npm run start:dev-client",
-    "start:dev-server": "./node_modules/.bin/nodemon -q --delay 1 -w src src/index.js",
+    "start:dev-server": "./node_modules/.bin/nodemon -q --delay 1 -w server server/index.js",
     "start:dev-client": "./node_modules/.bin/webpack client/index.js -o static/client.js -w --mode=\\\"development\\\" --module-bind js=babel-loader --devtool=source-map --display=normal",
     "create:database": "./createdb.sh"
   },

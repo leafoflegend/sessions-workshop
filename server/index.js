@@ -22,6 +22,7 @@ const STATIC_DIR = path.join(__dirname, '../static');
 app.use(express.json());
 app.use(express.static(STATIC_DIR));
 
+// simple logging middleware to view each request in your terminal - this is useful for debugging purposes
 app.use((req, res, next) => {
   console.log(`Request to ${req.path} - Body: `, req.body);
   next();

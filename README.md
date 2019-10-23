@@ -2,7 +2,7 @@
 ![Cookies](https://media1.giphy.com/media/BWoUbBTz1yuhW05Sgp/giphy.gif)
 
 ### Goal
-The goal of this workshop is to step into a small application, and implement cookie/session authentication. I have tried to remove everything that isn't directly related to sessions out of your hands. Webpack is setup. The front end is already making the request when you hit **Login**. Its even dumping the results of errors or successes onto the redux store! **Your goal is to focus solely on the following four tasks (with some optional stretches):** 
+The goal of this workshop is to step into a small application, and implement cookie/session authentication. I have tried to remove everything that isn't directly related to sessions out of your hands. Webpack is setup. The front end is already making the request when you hit **Login**. Its even dumping the results of errors or successes onto the redux store! **Your goal is to focus solely on the following four tasks (with some optional stretches):**
 
 1. The login form should only go to `/user` if a user submits a **username and password that exists on a user in the database.**
 2. You should build out the **seed side of `syncAndSeed` and the rest of the `User` model.**
@@ -17,10 +17,10 @@ The goal of this workshop is to step into a small application, and implement coo
 ### Advice
 
 **Files of interest:**
-1. `/src/db/models/User.js`
-2. `/src/db/index.js`
-3. `/src/client/Router.js`
-4. `/src/index.js`
+1. `/server/db/models/User.js`
+2. `/server/db/index.js`
+3. `/server/index.js`
+4. `/client/Router.js`
 
 **You really should not need to touch the other files. That doesn't mean you shouldn't read some of the ones that might help you better understand the flow. Put a `console.log` in the reducer if you want to look there, and you can add `logs` to the express routes if that helps you there.**
 

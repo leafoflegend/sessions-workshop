@@ -13,8 +13,9 @@ A Home page component has already been built. You will need to build a second co
 
 ### Stretch Goals
 
-4. People should be able to **sign up on the front end.**
-5. If a user is already logged in when they visit the site, they should be immediately brought to the `/user` route.
+4. If you stop and restart the server, **the user should still be logged in.**
+5. People should be able to **sign up on the front end.**
+6. If a user is already logged in when they visit the site, they should be immediately brought to the `/user` route.
 
 ### Advice
 

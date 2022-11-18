@@ -43,6 +43,6 @@
     "pg": "^7.12.1",
     "sequelize": "^5.21.1",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.12"
   }
 }
